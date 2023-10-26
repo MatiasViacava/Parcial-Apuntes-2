@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <mat-icon>menu</mat-icon>
+    <button mat-button [matMenuTriggerFor]="menuPostres">Postres</button>
+    <button mat-button [matMenuTriggerFor]="menuIngredientes">Ingredientes</button>
+  </mat-toolbar>
+  
+  <mat-menu #menuPostres="matMenu">
+    <button mat-menu-item routerLink="/postres/nuevo">Registrar</button>
+    <button mat-menu-item routerLink="/postres">Listar</button>
+    <button mat-menu-item routerLink="/postres/reporte">Buscar</button>
+
+    <!-- Agrega más elementos de menú si es necesario -->
+  </mat-menu>
+  
+  <mat-menu #menuIngredientes="matMenu">
+    <button mat-menu-item routerLink="/ingredientes/nuevo">Registrar Socio</button>
+    <button mat-menu-item routerLink="/ingredientes">Listar Socios</button>
+    <!-- Agrega más elementos de menú si es necesario -->
+  </mat-menu>
+  
+<router-outlet></router-outlet>
